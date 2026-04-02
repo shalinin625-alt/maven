@@ -1,7 +1,25 @@
-num = int(input("Enter a number: "))
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial Calculator</title>
+</head>
+<body>
+    <h2>Factorial Calculator</h2>
+    <input type="number" id="num" placeholder="Enter number">
+    <button onclick="calculate()">Calculate</button>
 
-fact = 1
-for i in range(1, num + 1):
-    fact *= i
+    <p id="result"></p>
 
-print("Factorial of", num, "is", fact)
+    <script>
+        function calculate() {
+            let num = document.getElementById("num").value;
+            let fact = 1;
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+            document.getElementById("result").innerText =
+                "Factorial of " + num + " is " + fact;
+        }
+    </script>
+</body>
+</html>
